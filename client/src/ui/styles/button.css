@@ -1,0 +1,48 @@
+
+.button {
+	display: inline-block;
+	padding: 6px 8px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	/*white-space: nowrap;*/
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	/*user-select: none;*/
+	color: #ffffff;
+	background-color: #7ee67e;
+	border-color: #56ca56;
+}
+
+.button:focus {
+	outline: thin dotted #7ee67e;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.button:hover,
+.button:focus {
+	color: #4ec44e;
+	text-decoration: none;
+}
+
+.button:active,
+.button_active {
+	background-image: none;
+	outline: 0;
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.button[disabled],
+fieldset[disabled] .button {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+}
+

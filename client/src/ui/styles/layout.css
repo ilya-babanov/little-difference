@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 15px;
+	min-width: 555px;
+	color: #555555;
+	margin: 0;
+	padding: 0;
+}
+
+.row {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	align-content: stretch;
+	/*height: 100%;*/
+	width: 100%;
+}
+
+.col-small,
+.col-big,
+.col-medium {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	height: 100%;
+	transition: all 0.25s ease;
+}
+
+.col-small {
+	/*background-color: #80b4ff;*/
+	min-width: 66px;
+	max-width: 333px;
+	width: 25%;
+}
+
+.col-medium {
+	background-color: #ebf2ff;
+	width: 50%;
+}
+
+.col-big {
+	background-color: #ffffff;
+	width: 70%;
+}
+
+
+

@@ -1,0 +1,18 @@
+
+.comment-editor {
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-content: space-between;
+}
+
+.comment-editor-button {
+	margin-top: 5px;
+	min-width: 60px;
+}
+
+/*.comment-editor-input {*/
+	/*width: 80%;*/
+/*}*/

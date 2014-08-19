@@ -1,0 +1,17 @@
+
+.block-title {
+	display: block;
+	padding: 5px 25px;
+	color: black;
+	background-color: #ceefff;
+	/*background-color: #eff9ff;*/
+	font-size: 110%;
+}
+
+.block-title-light {
+	background-color: #eff9ff;
+}
+
+.block-title-tall {
+	padding: 10px 25px;
+}
