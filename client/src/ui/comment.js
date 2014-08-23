@@ -9,6 +9,7 @@ function (r, RawMarkup) {
 				RawMarkup({style: "user-content comment-content", content: this.props.content}),
 				r.DOM.div(
 					{className: "comment-info"},
+					//Avatar({owner: this.props.author}),
 					r.DOM.span({className: "comment-author"}, this.props.author),
 					r.DOM.span({className: "comment-date"}, new Date().toLocaleString())
 				)

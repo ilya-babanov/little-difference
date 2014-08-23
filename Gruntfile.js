@@ -7,9 +7,13 @@ module.exports = function(grunt) {
 					baseUrl: "client/src",
 					paths: {
 						react: "empty:",
-						signals: "empty:",
-						oboe: ":empty:",
-						marked: "empty:"
+						signals: '../dist/libs/signals.min',
+						oboe: '../dist/libs/oboe-browser.min',
+						marked: '../dist/libs/marked.min',
+						router: '../dist/libs/director.min'
+					},
+					shim: {
+						router: {exports: 'Router'}
 					},
 					name: "main",
 					optimize: 'uglify2',

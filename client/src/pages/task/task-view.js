@@ -1,8 +1,8 @@
-define(['react', 'ui/project', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
-function (r, Project, CommentList, CommentEditor, BlockTitle) {
+define(['react', 'ui/task', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
+function (r, Task, CommentList, CommentEditor, BlockTitle) {
 
 	return r.createClass({
-		displayName: 'ProjectContainer',
+		displayName: 'TaskContainer',
 
 		componentDidMount: function () {
 			this.props.model.updated.add(this.onModelChange, this);
@@ -10,15 +10,15 @@ function (r, Project, CommentList, CommentEditor, BlockTitle) {
 
 		componentWillUnmount: function () {
 			this.props.model.updated.remove(this.onModelChange);
-			console.log('ProjectView will unmount');
+			console.log('TaskView will unmount');
 		},
 
 		componentWillUpdate: function () {
-			console.time('update Project');
+			console.time('update Task');
 		},
 
 		componentDidUpdate: function () {
-			console.timeEnd('update Project');
+			console.timeEnd('update Task');
 		},
 
 		getInitialState: function() {
@@ -29,7 +29,7 @@ function (r, Project, CommentList, CommentEditor, BlockTitle) {
 			if (this.props.id !== id) {
 				return;
 			}
-			console.log('ProjectView - onModelChenge');
+			console.log('TaskView - onModelChenge');
 			this.setState(this.getDataFromModel());
 		},
 
@@ -39,8 +39,8 @@ function (r, Project, CommentList, CommentEditor, BlockTitle) {
 
 		render: function () {
 			return r.DOM.div(
-				{className: "project-container"},
-				Project(this.state.project),
+				{className: "task-container"},
+				Task(this.state.task),
 				BlockTitle({style: 'block-title-light block-title-tall', title: 'Discussion'}),
 				CommentList({list: this.state.comments}),
 				CommentEditor({addComment: this.props.model.addComment.bind(this.props.model, this.props.id)})

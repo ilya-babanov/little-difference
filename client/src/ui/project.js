@@ -6,7 +6,7 @@ function (r, RawMarkup, BlockTitle) {
 
 		render: function () {
 			return r.DOM.div(
-				{className: "project"},
+				{className: "article project"},
 				r.DOM.h1({className: "project-title"}, this.props.title),
 
 				BlockTitle({title: 'Poblem Definition'}),
