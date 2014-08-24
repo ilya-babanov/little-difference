@@ -1,5 +1,5 @@
-define(['react', 'ui/project', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
-function (r, Project, CommentList, CommentEditor, BlockTitle) {
+define(['react', 'i18n', 'ui/project', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
+function (r, i18n, Project, CommentList, CommentEditor, BlockTitle) {
 
 	return r.createClass({
 		displayName: 'ProjectContainer',
@@ -41,7 +41,7 @@ function (r, Project, CommentList, CommentEditor, BlockTitle) {
 			return r.DOM.div(
 				{className: "project-container"},
 				Project(this.state.project),
-				BlockTitle({style: 'block-title-light block-title-tall', title: 'Discussion'}),
+				BlockTitle({style: 'block-title-light block-title-tall', title: i18n('article.discussion')}),
 				CommentList({list: this.state.comments}),
 				CommentEditor({addComment: this.props.model.addComment.bind(this.props.model, this.props.id)})
 			);

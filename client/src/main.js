@@ -5,13 +5,12 @@ requirejs.config({
 });
 
 
-require(['pages/project/project-ctrl', 'pages/task/task-ctrl', 'router'],
-function (projectCtrl, taskCtrl, Router) {
+require(['router', 'i18n', 'oboe', 'pages/project/project-ctrl', 'pages/task/task-ctrl'],
+function (Router, i18n, oboe, projectCtrl, taskCtrl) {
 
 	var contentBlock = document.querySelector('.content-block');
 
 	function showProject(id) {
-		console.log(id);
 		projectCtrl(id, contentBlock);
 	}
 
@@ -24,10 +23,14 @@ function (projectCtrl, taskCtrl, Router) {
 		'/task/:id': showTask
 	};
 
-	var router = new Router(routes);
-	router.init();
-
-	//showProject(123);
+	i18n._init(function (error) {
+		if (error) {
+			console.error('i18n failed');
+			return;
+		}
+		var router = new Router(routes);
+		router.init();
+	});
 
 });
 

@@ -1,5 +1,5 @@
-define(['react', 'marked'],
-function (r, marked) {
+define(['react', 'i18n', 'marked'],
+function (r, i18n, marked) {
 
 	var ENTER_KEY = 13;
 
@@ -47,7 +47,7 @@ function (r, marked) {
 				r.DOM.button({
 					className: 'button comment-editor-button', 
 					onClick: this.handleSubmit
-				}, "Add")
+				}, i18n('comments.add'))
 			);
 		}
 	});

@@ -1,5 +1,5 @@
-define(['react', 'ui/raw-markup', 'ui/block-title'],
-function (r, RawMarkup, BlockTitle) {
+define(['react', 'i18n', 'ui/raw-markup', 'ui/block-title'],
+function (r, i18n, RawMarkup, BlockTitle) {
 
 	return r.createClass({
 		displayName: 'Project',
@@ -9,16 +9,16 @@ function (r, RawMarkup, BlockTitle) {
 				{className: "article project"},
 				r.DOM.h1({className: "project-title"}, this.props.title),
 
-				BlockTitle({title: 'Poblem Definition'}),
+				BlockTitle({title: i18n('article.problem')}),
 				RawMarkup({style: 'project-content', content: this.props.problems}),
 
-				BlockTitle({title: 'Requirements'}),
+				BlockTitle({title: i18n('article.requirements')}),
 				RawMarkup({style: 'project-content', content: this.props.requirements}),
 
-				BlockTitle({title: 'Proposed Solution'}),
+				BlockTitle({title: i18n('article.solution')}),
 				RawMarkup({style: 'project-content', content: this.props.solutions}),
 
-				BlockTitle({title: 'Notes'}),
+				BlockTitle({title: i18n('article.additional')}),
 				RawMarkup({style: 'project-content', content: this.props.notes})
 			);
 		},

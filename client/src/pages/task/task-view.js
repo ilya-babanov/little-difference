@@ -1,5 +1,5 @@
-define(['react', 'ui/task', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
-function (r, Task, CommentList, CommentEditor, BlockTitle) {
+define(['react', 'i18n', 'ui/task', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
+function (r, i18n, Task, CommentList, CommentEditor, BlockTitle) {
 
 	return r.createClass({
 		displayName: 'TaskContainer',
@@ -41,7 +41,7 @@ function (r, Task, CommentList, CommentEditor, BlockTitle) {
 			return r.DOM.div(
 				{className: "task-container"},
 				Task(this.state.task),
-				BlockTitle({style: 'block-title-light block-title-tall', title: 'Discussion'}),
+				BlockTitle({style: 'block-title-light block-title-tall', title: i18n('article.discussion')}),
 				CommentList({list: this.state.comments}),
 				CommentEditor({addComment: this.props.model.addComment.bind(this.props.model, this.props.id)})
 			);

@@ -10,7 +10,9 @@ module.exports = function(grunt) {
 						signals: '../dist/libs/signals.min',
 						oboe: '../dist/libs/oboe-browser.min',
 						marked: '../dist/libs/marked.min',
-						router: '../dist/libs/director.min'
+						router: '../dist/libs/director.min',
+						i18njs: '../dist/libs/i18n', // @see http://i18njs.com,
+						i18n: 'services/i18n'
 					},
 					shim: {
 						router: {exports: 'Router'}
