@@ -1,0 +1,15 @@
+{
+	"values": {
+
+		"article.description": "Описание",
+		"article.requirements": "Требования",
+		"article.additional": "Дополнительно",
+		"article.problem": "Описание Проблемы",
+		"article.solution": "Предлагаемое Решение",
+		"article.discussion": "Дискуссия",
+
+		"comments.add": "Отправить"
+	},
+
+	"contexts": []
+}

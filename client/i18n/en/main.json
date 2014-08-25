@@ -1,0 +1,15 @@
+{
+	"values": {
+
+		"article.description": "Description",
+		"article.requirements": "Requirements",
+		"article.additional": "Additional",
+		"article.problem": "Poblem Definition",
+		"article.solution": "Proposed Solution",
+		"article.discussion": "Discussion",
+
+		"comments.add": "Add"
+	},
+
+	"contexts": []
+}
