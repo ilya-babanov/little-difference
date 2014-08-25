@@ -37,5 +37,9 @@ function (Router, i18n, oboe, projectCtrl, taskCtrl) {
 		taskCtrl(id, contentBlock);
 	}
 
+	if (!location.hash) {
+		location.hash = '/';
+	}
+
 });
 
