@@ -13,6 +13,7 @@ function (articleInterface) {
 			this.data[id] = {
 				task: {
 					id: id,
+					projectId: 123,
 					title: 'Organize Esperento Speaking Club',
 					description: '<p>I think it would be cool if we create speaking clubs in our towns!</p> <ul> <li>find people</li> <li>find place </li> <li>come up with pastime</li> </ul>',
 					requirements: '<p>It should be awesome!</p>',

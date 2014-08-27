@@ -1,7 +1,21 @@
-
 .article {
 	height: 100%;
 	width: 100%;
 	margin-bottom: 75px;
 }
 
+.article-title {
+	margin: 0;
+	padding: 25px;
+	background-color: #f7fdff;
+	/*background-color: #fffefa;*/
+}
+
+.article-content {
+	font-size: 110%;
+	line-height: 150%;
+	text-align: justify;
+	padding: 1px 25px 35px 25px;
+	background-color: #f7fdff;
+	/*background-color: #fffefa;*/
+}

@@ -8,6 +8,13 @@
 		"article.solution": "Предлагаемое Решение",
 		"article.discussion": "Дискуссия",
 
+		"brief.statistics": "Статистика",
+		"brief.tasks": "Задачи",
+		"brief.reports": "Отчеты",
+		"brief.sub-tasks": "Подзадачи",
+		"brief.team": "Команда",
+		"brief.friends": "Друзья",
+
 		"comments.add": "Отправить"
 	},
 

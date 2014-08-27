@@ -8,7 +8,15 @@
 		"article.solution": "Proposed Solution",
 		"article.discussion": "Discussion",
 
+		"brief.statistics": "Statistics",
+		"brief.tasks": "Tasks",
+		"brief.reports": "Reports",
+		"brief.sub-tasks": "Sub-Tasks",
+		"brief.team": "Team",
+		"brief.friends": "Friends",
+
 		"comments.add": "Add"
+
 	},
 
 	"contexts": []

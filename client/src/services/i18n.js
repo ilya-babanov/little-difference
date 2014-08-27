@@ -13,13 +13,14 @@ function (i18njs, oboe) {
 		}
 
 		oboe('/i18n/'+lang+'/main.json')
+		.fail(function() {
+			callback(true);
+		})
 		.done(function(data) {
 			i18njs.add(data);
 			callback();
-		})
-		.fail(function() {
-			callback(true);
 		});
+
 	};
 
 	return i18njs;

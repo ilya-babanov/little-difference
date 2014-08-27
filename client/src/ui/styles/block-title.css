@@ -12,6 +12,18 @@
 	background-color: #eff9ff;
 }
 
+.block-title-red {
+	background-color: #ffe3e3;
+}
+
+.block-title-green {
+	background-color: #e8ffd9;
+}
+
+.block-title-hand {
+	background-color: #fff6db;
+}
+
 .block-title-tall {
 	padding: 10px 25px;
 }

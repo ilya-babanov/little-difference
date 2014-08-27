@@ -5,36 +5,39 @@ requirejs.config({
 });
 
 
-require(['router', 'i18n', 'oboe', 'pages/project/project-ctrl', 'pages/task/task-ctrl'],
-function (Router, i18n, oboe, projectCtrl, taskCtrl) {
+require(['router', 'i18n', 'oboe', 'pages/project/project-page', 'pages/task/task-page'],
+function (Router, i18n, oboe, projectPage, taskPage) {
 
 	i18n._init(function (error) {
 		if (error) {
-			console.error('i18n failed');
+			console.error('i18n failed', error);
 			return;
 		}
 
-		var routes = {
-			'/': showRoot,
-			'/project/:id': showProject,
-			'/task/:id': showTask
-		};
-
-		new Router(routes).init();
+		crank();
 	});
 
-	var contentBlock = document.querySelector('.content-block');
+	function crank() {
+		var container = document.querySelector('.main-container');
 
-	function showRoot() {
-		projectCtrl(123, contentBlock);
-	}
+		function showRoot() {
+			location.hash = '/project/123/description';
+			//projectPage({id: 123, section: 'description', content: contentBlock, brief: briefBlock});
+		}
 
-	function showProject(id) {
-		projectCtrl(id, contentBlock);
-	}
+		function showProject(id, section) {
+			projectPage({id: id, section: section, container: container});
+		}
 
-	function showTask(id) {
-		taskCtrl(id, contentBlock);
+		function showTask(id, section) {
+			taskPage({id: id, section: section, container: container});
+		}
+
+		new Router({
+			'/': showRoot,
+			'/project/:id/:section': showProject,
+			'/task/:id/:section': showTask
+		}).init();
 	}
 
 	if (!location.hash) {
