@@ -1,4 +1,4 @@
-define(['react', 'i18n', 'ui/comment-list', 'ui/comment-editor', 'ui/block-title'],
+define(['react', 'i18n', 'ui/comments/comment-list', 'ui/comments/comment-editor', 'ui//block-title/block-title'],
 function (r, i18n, CommentList, CommentEditor, BlockTitle) {
 
 	return r.createClass({

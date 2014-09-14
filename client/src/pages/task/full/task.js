@@ -1,4 +1,4 @@
-define(['react', 'i18n', 'ui/raw-markup', 'ui/block-title'],
+define(['react', 'i18n', 'ui/raw-markup/raw-markup', 'ui/block-title/block-title'],
 function (r, i18n, RawMarkup, BlockTitle) {
 
 	return r.createClass({

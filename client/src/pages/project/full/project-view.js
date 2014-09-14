@@ -1,4 +1,4 @@
-define(['react', 'i18n', 'pages/project/full/project', 'ui/comment-block'],
+define(['react', 'i18n', 'pages/project/full/project', 'ui/comments/comment-block'],
 function (r, i18n, Project, CommentBlock) {
 
 	return r.createClass({

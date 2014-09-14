@@ -1,4 +1,4 @@
-define(['react', 'ui/comment'],
+define(['react', 'ui/comments/comment'],
 function (r, Comment) {
 	return r.createClass({
 		displayName: 'Comment',

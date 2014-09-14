@@ -1,6 +1,10 @@
 {
 	"values": {
 
+		"global.project": "Проект",
+		"global.task": "Задача",
+		"global.report": "Отчет",
+
 		"article.description": "Описание",
 		"article.requirements": "Требования",
 		"article.additional": "Дополнительно",

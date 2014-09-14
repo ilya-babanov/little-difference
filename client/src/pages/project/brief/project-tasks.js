@@ -1,4 +1,4 @@
-define(['react', 'i18n', 'ui/block-title'],
+define(['react', 'i18n', 'ui/block-title/block-title'],
 function (r, i18n, BlockTitle) {
 	return r.createClass({
 		displayName: 'ProjectTasks',
@@ -6,7 +6,7 @@ function (r, i18n, BlockTitle) {
 		render: function() {
 			return r.DOM.div(
 				{className: 'brief-block'},
-				BlockTitle({title: i18n('brief.tasks'), style: 'block-title-hand'}),
+				BlockTitle({title: i18n('brief.tasks')}),
 				r.DOM.div(
 					{className: 'brief-block-content'},
 					r.DOM.a({href: '#/task/1/description'}, 'Task 1'),

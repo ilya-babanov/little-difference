@@ -1,11 +1,8 @@
-.header-mock,
 .header-block {
 	width: 100%;
+	/*Sync heigth with main-container style in layout.css*/
 	height: 30px;
 	background-color: #90c9ff;
-}
-
-.header-block {
 	position: fixed;
 	z-index: 10;
 }

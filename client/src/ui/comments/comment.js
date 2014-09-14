@@ -1,4 +1,4 @@
-define(['react', 'ui/raw-markup'],
+define(['react', 'ui/raw-markup/raw-markup'],
 function (r, RawMarkup) {
 	return r.createClass({
 		displayName: 'Comment',

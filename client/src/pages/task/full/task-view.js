@@ -1,4 +1,4 @@
-define(['react', 'i18n', 'pages/task/full/task', 'ui/comment-block'],
+define(['react', 'i18n', 'pages/task/full/task', 'ui/comments/comment-block'],
 function (r, i18n, Task, CommentBlock) {
 
 	return r.createClass({

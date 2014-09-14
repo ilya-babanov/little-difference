@@ -1,6 +1,10 @@
 {
 	"values": {
 
+		"global.project": "Project",
+		"global.task": "Task",
+		"global.report": "Report",
+
 		"article.description": "Description",
 		"article.requirements": "Requirements",
 		"article.additional": "Additional",
