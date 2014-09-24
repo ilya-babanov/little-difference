@@ -45,4 +45,3 @@ function (Router, i18n, oboe, projectPage, taskPage) {
 	}
 
 });
-

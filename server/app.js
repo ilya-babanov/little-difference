@@ -1,18 +1,12 @@
-var express = require('express'),
-	http = require('http'),
-	path = require('path'),
-	WebSocketServer = require('ws').Server,
-	RedisStore = require('connect-redis')(express),
-	mongoose = require('mongoose'),
-	app = express();
+var express = require('express');
+var http = require('http');
+var app = express();
+var passport = require('passport');
 
-mongoose.connect('mongodb://localhost/test');
-
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-	console.log('mongoDB connection open');
-});
+//var path = require('path');
+//var WebSocketServer = require('ws').Server;
+//var RedisStore = require('connect-redis')(express);
+//var mongoose = require('mongoose');
 
 app.set('port', process.env.PORT || 4004);
 app.set('views', __dirname + '/views');
@@ -22,7 +16,7 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('caramba'));
-app.use(express.session({
+app.use(express.session({secret: 'bu ha-ha'}/*{
 	store: new RedisStore({
 		host: '127.0.0.1',
 		port: 6379,
@@ -32,7 +26,8 @@ app.use(express.session({
 	cookie: {
 		maxAge: 86400000*2 //two days
 	}
-}));
+}*/));
+app.use(passport.session());
 app.use(function(req, res, next){
 	res.locals.session = req.session;
 	next();

@@ -49,6 +49,7 @@ function (r, projectModel, ProjectView, ProjectBriefView, renderView) {
 
 
 	var cachedOptions;
+
 	function renderPage(options) {
 		if (options) {
 			cachedOptions = options;
