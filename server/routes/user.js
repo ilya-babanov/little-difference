@@ -1,5 +1,4 @@
-var exceptLogged = require('./middleware/exceptLogged'),
-	loadUser = require('./middleware/loadUser'),
+var loadUser = require('./middleware/loadUser'),
 	restrictUserToSelf = require('./middleware/restrictUserToSelf'),
 	delayCheck = require('./middleware/delayCheck'),
 	honeypotCheck = require('./middleware/honeypotCheck'),
@@ -7,7 +6,7 @@ var exceptLogged = require('./middleware/exceptLogged'),
 	isAdmin = require('./middleware/isAdmin'),
 	sessionCheck = require('./middleware/sessionCheck'),
 	createSessionToken = require('./logic/createSessionToken'),
-	User = require('../data/models/user');
+	User = require('../models/user');
 
 module.exports = function(app) {
 
